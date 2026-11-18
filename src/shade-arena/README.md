@@ -58,10 +58,10 @@ harbor run -c src/shade-arena/run_shade-arena.yaml
 harbor trial start -p datasets/shade-arena/bank-transfer-2 -a oracle --ve SHADE_ORACLE_CHECK=1
 ```
 
-The default Oracle configuration uses `openai/claude-haiku-5-5` on an
+The default Oracle configuration uses `openai/gpt-5.6-terra` on an
 OpenAI-compatible endpoint for the two model-graded tasks. Export
-`OPENAI_API_KEY` and `OPENAI_BASE_URL` for the endpoint. To use the same judge
-as the GPT validation runs, select it explicitly:
+`OPENAI_API_KEY` and `OPENAI_BASE_URL` for the endpoint. To reproduce the
+same judge settings with the local-path command:
 
 ```bash
 harbor run -p datasets/shade-arena -a oracle \
